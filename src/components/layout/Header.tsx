@@ -14,10 +14,7 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <Navbar
-      className="font-semibold bg-dark py-3"
-      classNames={{ item: "data-[active=true]:text-primary" }}
-    >
+    <Navbar className="font-semibold bg-dark py-3 ">
       <NavbarBrand>
         <Link href="/" className="text-primary text-2xl font-josefin">
           Pizza Fiesta
@@ -46,14 +43,14 @@ const Header = () => {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <Button
-          as={Link}
-          color="primary"
-          href={"/branches"}
-          className="font-semibold rounded-full px-6 py-2 text-dark"
-        >
-          Branches
-        </Button>
+        <Link href="/branches">
+          <Button
+            color="primary"
+            className="font-semibold rounded-full px-6 py-2 text-dark"
+          >
+            Branches
+          </Button>
+        </Link>
       </NavbarContent>
     </Navbar>
   );

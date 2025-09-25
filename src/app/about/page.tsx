@@ -1,7 +1,9 @@
-import AboutSection from '@/components/layout/AboutSection'
-import BusinessInfo from '@/components/layout/BusinessInfo'
-import ContactSecton from '@/components/layout/ContactSection'
-import React from 'react'
+"use client";
+
+import AboutSection from "@/components/layout/AboutSection";
+import BusinessInfo from "@/components/layout/BusinessInfo";
+import ContactSecton from "@/components/layout/ContactSection";
+import React from "react";
 
 const AboutPage = () => {
   return (
@@ -10,7 +12,7 @@ const AboutPage = () => {
       <BusinessInfo />
       <ContactSecton />
     </div>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

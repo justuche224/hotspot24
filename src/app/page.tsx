@@ -1,3 +1,5 @@
+"use client"
+
 import ContactSecton from "@/components/layout/ContactSection";
 import HomeSlider from "@/components/layout/HomeSlider";
 import BusinessInfo from "@/components/layout/BusinessInfo";
