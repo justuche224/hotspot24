@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  @apply text-3xl uppercase font-josefin;
+}
+
+h2 {
+  @apply text-2xl font-josefin;
+}
+
+h3 {
+  @apply text-xl font-josefin;
+}
+
+section.hero{
+  @apply block md:grid;
+  grid-template-columns: .4fr .6fr;
+}
+
+.input {
+  @apply block w-full mb-4 rounded-xl border p-2 border-gray-300 bg-gray-100 text-dark
+}
+
+.input:disabled{
+  @apply cursor-not-allowed bg-dark text-gray-500
+}
+
+*[data-slot="input"] {
+  @apply border-0 mb-0 px-0 text-medium
+}
+
+label{
+  @apply text-gray-400 text-sm leading-tight;
+}
+
+button[type="button"], a[role="button"] {
+  @apply text-medium
+}
+
+button[type="submit"]{
+  @apply border-primary bg-primary text-dark text-medium
+}
+
+button:disabled {
+  @apply bg-gray-300 text-gray-500 cursor-not-allowed
+}
+
+button[type="submit"]:disabled {
+  @apply bg-primary border-0 cursor-not-allowed
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* AMOLED Black Glass Effects - Professional & Soulful */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.liquid-glass-enhanced {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.liquid-glass-header {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* AMOLED Black Glass Border Utilities - Professional & Minimal */
+.glass-border {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px) saturate(180%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-border-enhanced {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(28px) saturate(180%);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.glass-border-subtle {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* AMOLED Black Glass Border Hover Effects - Subtle & Professional */
+.glass-border:hover {
+  filter: drop-shadow(0 0 4px rgba(255, 165, 0, 0.15))
+    drop-shadow(2px 0 4px rgba(255, 69, 0, 0.1))
+    drop-shadow(-2px 0 4px rgba(255, 140, 0, 0.08));
+}
+
+.glass-border-enhanced:hover {
+  filter: drop-shadow(0 0 6px rgba(255, 165, 0, 0.2))
+    drop-shadow(3px 0 6px rgba(255, 69, 0, 0.15))
+    drop-shadow(-3px 0 6px rgba(255, 140, 0, 0.12));
+}
+
+.glass-border-subtle:hover {
+  filter: drop-shadow(0 0 2px rgba(255, 165, 0, 0.1))
+    drop-shadow(1px 0 2px rgba(255, 69, 0, 0.08))
+    drop-shadow(-1px 0 2px rgba(255, 140, 0, 0.06));
+}
+
+/* Logo Marquee Animations - Seamless Infinite Loop */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-33.333%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-scroll-right {
+  animation: scroll-right 45s linear infinite;
+}
+
+.animate-scroll-left {
+  animation: scroll-left 45s linear infinite;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
