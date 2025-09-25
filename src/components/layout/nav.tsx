@@ -27,7 +27,7 @@ const PublicNav = () => {
           </Link>
           <Button
             aria-label="Branches"
-            className="hidden md:inline-block"
+            className="hidden md:inline-block liquid-glass"
             asChild
             variant={"link"}
           >
@@ -35,7 +35,7 @@ const PublicNav = () => {
           </Button>
           <Button
             aria-label="About Us"
-            className="hidden md:inline-block"
+            className="hidden md:inline-block liquid-glass"
             asChild
             variant={"link"}
           >
@@ -43,7 +43,7 @@ const PublicNav = () => {
           </Button>
           <Button
             aria-label="Contact"
-            className="hidden md:inline-block"
+            className="hidden md:inline-block liquid-glass"
             asChild
             variant={"link"}
           >

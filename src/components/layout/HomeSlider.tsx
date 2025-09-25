@@ -18,17 +18,17 @@ const HomeSlider = ({ className }: SectionProps) => {
                   Welcome
                 </span>
                 <h1 className="mb-8 text-[40px]">
-                  We cooked your desired
-                  <span className="block">Pizza Recipe</span>
+                  Hotpot 24 - 24/7 Food Delivery in Lekki
+                  <span className="block">Lekki&apos;s Fastest Delivery</span>
                 </h1>
                 <h3 className="mb-16">
-                  A small river named Duden flows by their place and supplies it
-                  with the <span className="block">necessary regelialia.</span>
+                  Treat yourself to our exquisite cuisine, where every dish
+                  tells a story!
                 </h3>
                 <p>
                   <Button
                     as={Link}
-                    href="/menu"
+                    href="/branches"
                     color="primary"
                     radius="none"
                     size="lg"
@@ -38,12 +38,12 @@ const HomeSlider = ({ className }: SectionProps) => {
                   </Button>
                   <Button
                     as={Link}
-                    href="/menu"
+                    href="/branches"
                     radius="none"
                     size="lg"
                     className="bg-transparent border-2 py-4 px-6 ml-2"
                   >
-                    View Menu
+                    View Branches
                   </Button>
                 </p>
               </div>
@@ -57,17 +57,17 @@ const HomeSlider = ({ className }: SectionProps) => {
                 </div>
                 <div className="max-w-xl ml-6">
                   <span className="font-nothingYouCouldDo text-primary text-[40px] mb-4">
-                    Crunchy
+                    Delicious
                   </span>
-                  <h1 className="mb-8 text-[40px]">Italian Pizza</h1>
+                  <h1 className="mb-8 text-[40px]">Nigerian Cuisine</h1>
                   <h3 className="mb-16">
-                    A small river named Duden flows by their place and supplies
-                    it with the necessary regelialia.
+                    No stress, no hassle, just delicious food delivered to your
+                    doorstep.
                   </h3>
                   <p>
                     <Button
                       as={Link}
-                      href="/menu"
+                      href="/branches"
                       color="primary"
                       radius="none"
                       size="lg"
@@ -77,12 +77,12 @@ const HomeSlider = ({ className }: SectionProps) => {
                     </Button>
                     <Button
                       as={Link}
-                      href="/menu"
+                      href="/branches"
                       radius="none"
                       size="lg"
                       className="bg-transparent border-2 py-4 px-6 ml-2"
                     >
-                      View Menu
+                      View Branches
                     </Button>
                   </p>
                 </div>
@@ -96,15 +96,14 @@ const HomeSlider = ({ className }: SectionProps) => {
                   <span className="font-nothingYouCouldDo text-primary text-[40px] mb-4">
                     Delicious
                   </span>
-                  <h1 className="mb-8 text-[40px]">Italian Cuizine</h1>
+                  <h1 className="mb-8 text-[40px]">Anytime, Anywhere</h1>
                   <h3 className="mb-16">
-                    A small river named Duden flows by their place and supplies
-                    it with the necessary regelialia.
+                    We are available 24/7, so you can order anytime, anywhere.
                   </h3>
                   <p>
                     <Button
                       as={Link}
-                      href="/menu"
+                      href="/branches"
                       color="primary"
                       radius="none"
                       size="lg"
@@ -114,12 +113,12 @@ const HomeSlider = ({ className }: SectionProps) => {
                     </Button>
                     <Button
                       as={Link}
-                      href="/menu"
+                      href="/branches"
                       radius="none"
                       size="lg"
                       className="bg-transparent border-2 py-4 px-6 ml-2"
                     >
-                      View Menu
+                      View Branches
                     </Button>
                   </p>
                 </div>

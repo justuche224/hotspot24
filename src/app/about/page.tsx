@@ -8,7 +8,7 @@ import React from "react";
 const AboutPage = () => {
   return (
     <div>
-      <AboutSection />
+      <AboutSection className="h-[100svh]" />
       <BusinessInfo />
       <ContactSecton />
     </div>

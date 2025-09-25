@@ -13,7 +13,7 @@ const ServicesSection = ({className}:SectionProps) => {
           <h1 className="font-semibold mb-4">Our Services</h1>
           <p>
             From swift and reliable delivery to a diverse selection of healthy food options and authentic original recipes,
-            we&apos;ve crafted a seamless experience for your pizza cravings.
+            we&apos;ve crafted a seamless experience for your cravings.
           </p>
         </div>
         <div className='grid grid-cols-3 gap-6'>
@@ -56,7 +56,7 @@ const ServicesSection = ({className}:SectionProps) => {
             </div>
             <h3 className='uppercase mb-4'>Original Recipes</h3>
             <div>
-              Delight your taste buds with the authenticity of our Original Recipe pizzas,
+              Delight your taste buds with the authenticity of our Original Recipe dishes,
               where every slice is a celebration of timeless flavors and culinary expertise.
             </div>
           </div>
