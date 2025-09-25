@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import PrelineScript from "@/util/PrelineScript";
 import { UIProvider } from "@/util/UIProvider";
 import PublicNav from "@/components/layout/nav";
+import { ReactQueryProvider } from "@/providers/react-query-provider";
 
 export const metadata: Metadata = {
   title: "Pizza Fiesta: Order Delicious Pizzas Online",
@@ -36,7 +37,7 @@ export default function RootLayout({
           <main>
             <AppContextProvider>
               <Toaster />
-              {children}
+              <ReactQueryProvider>{children}</ReactQueryProvider>
               <Footer />
             </AppContextProvider>
           </main>
