@@ -8,7 +8,7 @@ export default function Testimonials() {
       location: "Victoria Island",
       rating: 5,
       review:
-        "Hotspot 24 has been a game changer! Their 24/7 service means I can get amazing Nigerian food whenever the craving hits. The jollof rice is absolutely authentic and delivered piping hot.",
+        "Hotpot 24 has been a game changer! Their 24/7 service means I can get amazing Nigerian food whenever the craving hits. The jollof rice is absolutely authentic and delivered piping hot.",
       avatar: "/api/placeholder/64/64",
     },
     {
@@ -24,7 +24,7 @@ export default function Testimonials() {
       location: "Ikoyi",
       rating: 5,
       review:
-        "As someone who loves fresh, local ingredients, Hotspot 24 delivers on every promise. Their pounded yam and egusi soup tastes exactly like home. The freshness is unbeatable!",
+        "As someone who loves fresh, local ingredients, Hotpot 24 delivers on every promise. Their pounded yam and egusi soup tastes exactly like home. The freshness is unbeatable!",
       avatar: "/api/placeholder/64/64",
     },
     {
@@ -32,7 +32,7 @@ export default function Testimonials() {
       location: "Ajah",
       rating: 5,
       review:
-        "Moved to Lagos 6 months ago and Hotspot 24 has made the transition so much easier. Their fried rice and chicken is the best I've had outside of Nigeria. Fast, fresh, and delicious!",
+        "Moved to Lagos 6 months ago and Hotpot 24 has made the transition so much easier. Their fried rice and chicken is the best I've had outside of Nigeria. Fast, fresh, and delicious!",
       avatar: "/api/placeholder/64/64",
     },
     {
@@ -40,7 +40,7 @@ export default function Testimonials() {
       location: "Lekki Phase 2",
       rating: 5,
       review:
-        "The convenience is unmatched. Working late nights, I can always count on Hotspot 24 for quick, nutritious meals. Their customer service is also top-notch!",
+        "The convenience is unmatched. Working late nights, I can always count on Hotpot 24 for quick, nutritious meals. Their customer service is also top-notch!",
       avatar: "/api/placeholder/64/64",
     },
     {
@@ -48,7 +48,7 @@ export default function Testimonials() {
       location: "Banana Island",
       rating: 5,
       review:
-        "Hotspot 24 sets the standard for food delivery in Lagos. Every dish arrives perfectly cooked, and their commitment to local sourcing shows in every bite. Highly recommended!",
+        "Hotpot 24 sets the standard for food delivery in Lagos. Every dish arrives perfectly cooked, and their commitment to local sourcing shows in every bite. Highly recommended!",
       avatar: "/api/placeholder/64/64",
     },
   ];
