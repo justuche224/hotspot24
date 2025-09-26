@@ -1,34 +1,20 @@
 "use client";
+
 import { ArrowRight, MapPin, Clock, Phone } from "lucide-react";
 import Link from "next/link";
+import { getBranches, Branch } from "@/lib/branches";
+import { useEffect, useState } from "react";
 
 export default function CTASection() {
-  const branches = [
-    {
-      name: "Lekki Phase 1",
-      address: "Plot 123 Admiralty Way, Lekki Phase 1",
-      phone: "+234 801 234 5678",
-      hours: "24/7",
-    },
-    {
-      name: "Victoria Island",
-      address: "45B Kofo Abayomi Street, VI",
-      phone: "+234 801 234 5679",
-      hours: "24/7",
-    },
-    {
-      name: "Ikoyi",
-      address: "18B Parkview Estate, Ikoyi",
-      phone: "+234 801 234 5680",
-      hours: "24/7",
-    },
-    {
-      name: "Ajah",
-      address: "Badore Road, Ajah",
-      phone: "+234 801 234 5681",
-      hours: "24/7",
-    },
-  ];
+  const [branches, setBranches] = useState([] as Branch[]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getBranches().then((fetchedBranches) => {
+      setBranches(fetchedBranches);
+      setLoading(false);
+    });
+  }, []);
 
   return (
     <section className="py-24 relative overflow-hidden">
@@ -60,50 +46,60 @@ export default function CTASection() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {branches.map((branch, index) => (
-            <div
-              key={index}
-              className="glass-border-subtle rounded-2xl p-6 hover:border-orange-500/40 transition-all duration-300 group"
-            >
-              <div className="space-y-4">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 bg-orange-500/20 rounded-lg group-hover:bg-orange-500/30 transition-colors">
-                    <MapPin className="h-5 w-5 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white">
-                    {branch.name}
-                  </h3>
-                </div>
-
-                <div className="space-y-3 text-white/90">
-                  <div className="flex items-start gap-2">
-                    <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
-                    <span className="text-sm">{branch.address}</span>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 flex-shrink-0" />
-                    <span className="text-sm">{branch.phone}</span>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <Clock className="h-4 w-4 flex-shrink-0" />
-                    <span className="text-sm font-medium">{branch.hours}</span>
-                  </div>
-                </div>
-
-                <Link
-                  href={`/menu/${branch.name
-                    .toLowerCase()
-                    .replace(/\s+/g, "-")}`}
-                  className="inline-flex items-center gap-2 text-white font-medium hover:text-white/80 transition-colors group/link"
-                >
-                  View Menu
-                  <ArrowRight className="h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
-                </Link>
-              </div>
+          {loading ? (
+            <div className="col-span-full text-center py-8">
+              <p className="text-gray-400">Loading branches...</p>
             </div>
-          ))}
+          ) : branches.length === 0 ? (
+            <div className="col-span-full text-center py-8">
+              <p className="text-gray-400">
+                No branches available at the moment.
+              </p>
+            </div>
+          ) : (
+            branches.map((branch, index) => (
+              <div
+                key={index}
+                className="glass-border-subtle rounded-2xl p-6 hover:border-orange-500/40 transition-all duration-300 group"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 bg-orange-500/20 rounded-lg group-hover:bg-orange-500/30 transition-colors">
+                      <MapPin className="h-5 w-5 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white">
+                      {branch.name}
+                    </h3>
+                  </div>
+
+                  <div className="space-y-3 text-white/90">
+                    <div className="flex items-start gap-2">
+                      <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span className="text-sm">{branch.address}</span>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <Phone className="h-4 w-4 flex-shrink-0" />
+                      <span className="text-sm">{branch.phone}</span>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <Clock className="h-4 w-4 flex-shrink-0" />
+                      <span className="text-sm font-medium">24/7</span>
+                    </div>
+                  </div>
+
+                  <Link
+                    href={`/branches/${branch.slug}`}
+                    className="inline-flex items-center gap-2 text-white font-medium hover:text-white/80 transition-colors group/link"
+                  >
+                    Order Now
+                    <ArrowRight className="h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+            ))
+          )}
         </div>
 
         <div className="text-center mt-16">

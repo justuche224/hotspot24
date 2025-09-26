@@ -112,9 +112,6 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  // verification: {
-  //   google: "your-google-verification-code",
-  // },
 };
 
 export default function RootLayout({
@@ -125,10 +122,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth dark">
       <head>
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,500,700&display=swap"
           rel="stylesheet"
         />
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap"
           rel="stylesheet"

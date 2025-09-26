@@ -26,7 +26,6 @@ const PublicNav = () => {
   return (
     <header className="fixed top-0 z-[99] p-4 w-full">
       <nav className="container mx-auto max-w-4xl liquid-glass-header shadow flex items-center justify-between w-full px-5 md:px-20 py-2 rounded-full">
-        <div className="flex gap-1">
           <Link
             href={"/"}
             className="font-bold tracking-tigt flex items-center gap-1"
@@ -36,6 +35,7 @@ const PublicNav = () => {
               Hotpot 24
             </span>
           </Link>
+        <div className="flex gap-1">
           <Button
             aria-label="Branches"
             className="hidden md:inline-block liquid-glass"
