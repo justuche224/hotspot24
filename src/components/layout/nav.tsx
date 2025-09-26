@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { Menu, ShoppingCart } from "lucide-react";
 import Link from "next/link";
@@ -10,8 +12,17 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import React from "react";
+import { usePathname } from "next/navigation";
 
 const PublicNav = () => {
+  const pathname = usePathname();
+  
+  const iSAdminPage = pathname.includes("/admin");
+
+  if(iSAdminPage){
+    return null;
+  }
+
   return (
     <header className="fixed top-0 z-[99] p-4 w-full">
       <nav className="container mx-auto max-w-4xl liquid-glass-header shadow flex items-center justify-between w-full px-5 md:px-20 py-2 rounded-full">

@@ -1,3 +1,5 @@
+"use client"
+
 import { FaceBookIcon } from "@/icons/FaceBookIcon";
 import { InstaIcon } from "@/icons/InstaIcon";
 import { LocationIcon } from "@/icons/LocationIcon";
@@ -5,8 +7,16 @@ import { MailIcon } from "@/icons/MailIcon";
 import { PhoneIcon } from "@/icons/PhoneIcon";
 import { TwitterIcon } from "@/icons/TwitterIcon";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname();
+  const iSAdminPage = pathname.includes("/admin");
+  
+  if(iSAdminPage){
+    return null;
+  }
+
   return (
     <footer className="bg-gray-950 pt-12">
       <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-6 px-10 lg:px-48">
