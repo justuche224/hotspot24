@@ -53,7 +53,7 @@ const HomeSlider = ({ className }: SectionProps) => {
             <SlideBackground bgImage={"/assets/slider_bg_2.jpg"}>
               <div className="w-full flex flex-row gap-6 justify-center items-center h-full absolute z-10">
                 <div className="w-1/4">
-                  <Image src="/assets/slider_pizza_1.png" alt="" />
+                  <Image src="/assets/jollof-rice4253.png" alt="" />
                 </div>
                 <div className="max-w-xl ml-6">
                   <span className="font-nothingYouCouldDo text-primary text-[40px] mb-4">
@@ -123,7 +123,7 @@ const HomeSlider = ({ className }: SectionProps) => {
                   </p>
                 </div>
                 <div className="w-1/4">
-                  <Image src="/assets/slider_pizza_2.png" alt="" />
+                  <Image src="/assets/chicken-nuggets6784.png" alt="" />
                 </div>
               </div>
             </SlideBackground>
