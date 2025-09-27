@@ -6,7 +6,7 @@ import Dashboard from "@/components/admin/dashboard";
 const page = async () => {
   const user = await serverAuth();
   if (!user || user.role !== "admin") {
-    return redirect("/");
+    return redirect("/login");
   }
   return <Dashboard />;
 };

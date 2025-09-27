@@ -12,7 +12,7 @@ import {
 const NewBranchPage = async () => {
   const user = await serverAuth();
   if (!user || user.role !== "admin") {
-    return redirect("/");
+    return redirect("/login");
   }
 
   return (

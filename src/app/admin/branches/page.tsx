@@ -17,7 +17,7 @@ import BranchesActions from "@/components/admin/branches-actions";
 const BranchesPage = async () => {
   const user = await serverAuth();
   if (!user || user.role !== "admin") {
-    return redirect("/");
+    return redirect("/login");
   }
 
   const result = await getBranches();

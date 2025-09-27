@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import { AppContextProvider } from "../util/ContextProvider";
-import { Toaster } from "react-hot-toast";
 import PrelineScript from "@/util/PrelineScript";
 import { UIProvider } from "@/util/UIProvider";
 import PublicNav from "@/components/layout/nav";
 import { ReactQueryProvider } from "@/providers/react-query-provider";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Hotpot 24 - 24/7 Food Delivery in Lekki",
@@ -138,7 +138,7 @@ export default function RootLayout({
           <PublicNav />
           <main>
             <AppContextProvider>
-              <Toaster />
+              <Toaster richColors position="top-center" />
               <ReactQueryProvider>{children}</ReactQueryProvider>
               <Footer />
             </AppContextProvider>

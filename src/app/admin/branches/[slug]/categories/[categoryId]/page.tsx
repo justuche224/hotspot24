@@ -23,7 +23,7 @@ interface EditCategoryPageProps {
 const EditCategoryPage = async ({ params }: EditCategoryPageProps) => {
   const user = await serverAuth();
   if (!user || user.role !== "admin") {
-    return redirect("/");
+    return redirect("/login");
   }
 
   const branch = await getBranchBySlug((await params).slug);

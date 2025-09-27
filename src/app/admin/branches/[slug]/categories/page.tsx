@@ -23,7 +23,7 @@ interface CategoriesPageProps {
 const CategoriesPage = async ({ params }: CategoriesPageProps) => {
   const user = await serverAuth();
   if (!user || user.role !== "admin") {
-    return redirect("/");
+    return redirect("/login");
   }
 
   const branch = await getBranchBySlug((await params).slug);

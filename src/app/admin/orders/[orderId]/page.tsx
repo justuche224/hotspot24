@@ -39,7 +39,7 @@ interface OrderDetailsPageProps {
 const OrderDetailsPage = async ({ params }: OrderDetailsPageProps) => {
   const user = await serverAuth();
   if (!user || user.role !== "admin") {
-    return redirect("/");
+    return redirect("/login");;
   }
 
   const { order, orderItems } = await getOrderDetails((await params).orderId);

@@ -23,7 +23,7 @@ import Link from "next/link";
 const OrdersPage = async () => {
   const user = await serverAuth();
   if (!user || user.role !== "admin") {
-    return redirect("/");
+    return redirect("/login");;
   }
 
   const [orders, branches] = await Promise.all([getAllOrders(), getBranches()]);
