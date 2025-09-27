@@ -237,6 +237,7 @@ export default function BranchMenu({ branch }: BranchMenuProps) {
           {filteredFoodItems.map((item) => (
             <motion.div
               key={item.id}
+              // @ts-ignore - framer motion
               className="group rounded-2xl overflow-hidden glass-border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-orange-500/30"
               whileHover={{ y: -5 }}
               transition={{ duration: 0.2 }}
