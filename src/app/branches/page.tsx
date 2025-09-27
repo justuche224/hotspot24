@@ -3,6 +3,9 @@ import ServicesSection from "@/components/layout/ServicesSection";
 import BranchesPage from "./branches";
 import React from "react";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 const ServicesPage = () => {
   return (
     <div className="space-y-10 pt-24">

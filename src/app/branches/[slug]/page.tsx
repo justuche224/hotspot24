@@ -12,12 +12,7 @@ const MenuPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   }
   return (
     <section className="py-12 space-y-10 pt-24 container mx-auto px-2">
-      <SectionHeader
-        header={branch.name}
-        description={
-          branch.description
-        }
-      />
+      <SectionHeader header={branch.name} description={branch.description} />
       <BranchMenu branch={branch} />
     </section>
   );

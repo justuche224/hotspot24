@@ -1,5 +1,6 @@
 "use server";
 
+import { unstable_noStore as noStore } from "next/cache";
 import db from "@/db";
 import {
   branches,
@@ -431,6 +432,7 @@ export const getOrderDetails = async (orderId: string) => {
 // PUBLIC ACTIONS
 
 export const getPublicBranches = async () => {
+  noStore();
   const result = await db
     .select({
       id: branches.id,
@@ -451,6 +453,7 @@ export const getPublicBranches = async () => {
 };
 
 export const getBranchBySlug = async (slug: string) => {
+  noStore();
   const [branch] = await db
     .select()
     .from(branches)
@@ -462,6 +465,7 @@ export const getBranchBySlug = async (slug: string) => {
 };
 
 export const getPublicCategories = async (branchId: string) => {
+  noStore();
   const result = await db
     .select()
     .from(categories)
@@ -475,6 +479,7 @@ export const getPublicFoodItems = async (
   branchId: string,
   categoryId?: string
 ) => {
+  noStore();
   let whereClause;
   if (categoryId) {
     whereClause = and(
@@ -495,6 +500,7 @@ export const getPublicFoodItems = async (
 };
 
 export const getFoodItemBySlug = async (branchId: string, slug: string) => {
+  noStore();
   const [foodItem] = await db
     .select()
     .from(food_items)
