@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       "Fresh Nigerian cuisine delivered 24/7 in Lekki Phase 1 & Phase 2. Rice dishes, soups, grills, and authentic Lagos flavors. Fast WhatsApp ordering.",
     images: [
       {
-        url: "/images/hotpot24-20250924-0002.jpg",
+        url: "/images/screenshot.png",
         width: 1920,
         height: 1280,
         alt: "Hotpot 24 - 24/7 Food Delivery in Lekki",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
       "Fresh Nigerian cuisine delivered 24/7 in Lekki Phase 1 & Phase 2. Rice dishes, soups, grills, and authentic Lagos flavors. Fast WhatsApp ordering.",
     images: [
       {
-        url: "/images/hotpot24-20250924-0002.jpg",
+        url: "/images/screenshot.png",
         width: 1920,
         height: 1280,
         alt: "Hotpot 24 - 24/7 Food Delivery in Lekki",
