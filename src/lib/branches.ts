@@ -76,7 +76,7 @@ function transformBranch(dbBranch: {
       days: "Monday - Sunday",
     },
     deliveryRadius: "5km radius",
-    deliveryFee: 1500,
+    deliveryFee: 0,
     testimonials: [
       {
         id: 1,
@@ -90,7 +90,7 @@ function transformBranch(dbBranch: {
       {
         title: "Welcome Offer",
         description: "Free delivery for first-time orders above ₦5,000",
-        validUntil: "2024-12-31",
+        validUntil: "2026-12-31",
       },
     ],
   };
